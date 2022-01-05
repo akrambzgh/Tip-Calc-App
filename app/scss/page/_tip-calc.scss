@@ -1,0 +1,206 @@
+@use "../components/input";
+@use "../components/button";
+
+body {
+  @include flex(center, center, column);
+  background-color: lighten($color: $StrongCyan, $amount: 35);
+}
+
+.header {
+  margin: 30px auto;
+  @include largeScreen() {
+      margin: 10px auto;
+  }
+  h1 {
+    color: $VeryDarkCyan;
+    font-size: xx-large;
+    letter-spacing: 5px;
+    line-height: 1.3;
+  }
+}
+
+main {
+  width: 100%;
+  border-radius: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: $White;
+  @include largeScreen() {
+    .container {
+      @include flex(space-between, center, row);
+    }
+    width: 80%;
+    padding: 15px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      @include flex(space-between, center, row);
+    }
+    width: 90%;
+  }
+  @media (min-width: 992px) and (max-width: 1000px) {
+    .container {
+      @include flex(space-between, center, row);
+    }
+      @include flex(space-between, center, column);
+  }
+  .form {
+    @include largeScreen() {
+      width: 49%;
+      display: inline-block;
+    }
+    .mony {
+        h3 {
+        color: $DarkGrayishCyan;
+        }
+        .mony-container {
+          margin-top: 20px;
+          padding-right: 10px;
+          border: 2px solid transparent;
+          border-radius: 4px;
+          direction: rtl;
+          position: relative;
+          &.on-write {
+            border: 2px solid lighten($color: $StrongCyan, $amount: 35);
+          }
+          background-color: $LightGrayishCyan;
+          @include flex(space-between, center, row);
+          img {
+            position: absolute;
+            left: 10px;
+          }
+          input.mony-input {
+            border: 2px solid transparent;
+            &:focus {
+              border: 2px solid transparent;
+            }
+          }
+        }
+    }
+    .tip-per {
+      margin-top: 25px;
+      text-align: left;
+      h3 {
+        color: $DarkGrayishCyan;
+      }
+      .tip-container {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include largeScreen() {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+        gap: 10px;
+        width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 15px;
+            margin-right: 2px;
+          }
+          button.persentige {
+            width: 100%;
+            &:not(:last-child) {
+              margin-bottom: 5px;
+            }
+            &.selected {
+              background-color: lighten($color: $StrongCyan, $amount: 18);
+              color: $VeryDarkCyan;
+            }
+          }
+          input.custom-input {
+            width: 100%;
+        }
+      }
+    }
+    .people {
+      margin-top: 20px;
+      span {
+        display: none;
+        margin-top: -20px;
+        margin-left: 75px;
+        color: $errorText;
+        user-select: none;
+        cursor: pointer;
+      }
+      h3 {
+        display: inline-block;
+      }
+      &.error {
+        span {
+          display: inline-block;
+        }
+      }
+      .people-container {
+        margin-top: 20px;
+        padding-right: 10px;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        direction: rtl;
+        position: relative;
+        &.on-write {
+          border: 2px solid lighten($color: $StrongCyan, $amount: 35);
+        }
+        background-color: $LightGrayishCyan;
+        @include flex(space-between, center, row);
+        img {
+          position: absolute;
+          left: 10px;
+        }
+        input.people-input {
+          border: 2px solid transparent;
+          &:focus {
+            border: 2px solid transparent;
+          }
+        }
+      }
+    }
+  }
+  .result {
+      background-color: $VeryDarkCyan;
+      margin-top: 30px;
+      border-radius: 14px;
+      padding: 15px;
+      @include largeScreen() {
+        width: 49%;
+      }
+    .tip-result,
+    .total-result {
+      @include flex(space-between, center, row);
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      .title {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        h3 {
+          color: $White;
+        }
+        span {
+          display: block;
+          margin-top: 5px;
+          color: $DarkGrayishCyan;
+        }
+      }
+      .amount {
+        h1 {
+          color: lighten($color: $StrongCyan, $amount: 35);
+        }
+      }
+    }
+  }
+  .reset-button {
+    @include largeScreen() {
+      margin-top: 36%;
+    }
+    button.reset-btn {
+      width: 100%;
+      background-color: lighten($color: $StrongCyan, $amount: 18);
+      color: $VeryDarkCyan;
+      transition: $transitionDuaration;
+      &:hover {
+        background-color: lighten($color: $StrongCyan, $amount: 35);
+      }
+    }
+  }
+}

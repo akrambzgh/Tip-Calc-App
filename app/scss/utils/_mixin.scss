@@ -1,0 +1,12 @@
+@mixin largeScreen() {
+    @media (min-width: 992px) {
+        @content;
+    };
+};
+
+@mixin flex($js,$al,$d) {
+    display: flex;
+    justify-content: $js;
+    align-items: $al;
+    flex-direction: $d;
+}

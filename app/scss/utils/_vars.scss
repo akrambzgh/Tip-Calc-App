@@ -1,0 +1,16 @@
+// Colors
+
+// Primary
+$StrongCyan: hsl(172, 67%, 45%);
+
+// Neutral
+$VeryDarkCyan: hsl(183, 100%, 15%) ;
+$DarkGrayishCyan: hsl(186, 14%, 43%); 
+$DarkGrayishCyan: hsl(184, 14%, 56%);
+$LightGrayishCyan: hsl(185, 41%, 84%); 
+$LightGrayishCyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+$borderColor: lighten($color: $StrongCyan, $amount: 35);
+$errorText: hsl(4, 90%, 58%);
+
+$transitionDuaration: 350ms;

@@ -1,0 +1,27 @@
+@import "../utils/vars";
+
+input {
+  background-color: $LightGrayishCyan;
+  caret-color: $VeryDarkCyan;
+  color: $VeryDarkCyan;
+  border-radius: 4px;
+  padding: 15px 0px 15px 15px;
+  width: 100%;
+  caret-color: $DarkGrayishCyan;
+  border: 2px solid transparent;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+  color: $VeryDarkCyan;
+  font-weight: bold;
+
+  &::placeholder {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    color: $VeryDarkCyan;
+    font-weight: bold;
+  }
+
+  &:focus {
+    border: 2px solid $VeryDarkCyan;
+  }
+}
