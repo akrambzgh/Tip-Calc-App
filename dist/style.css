@@ -265,16 +265,20 @@ main .form .people {
 main .form .people span {
   display: none;
   margin-top: -20px;
-  margin-left: 75px;
+  margin-left: 20px;
   color: #f44034;
+  text-align: right;
   user-select: none;
+  font-size: 12px;
   cursor: pointer;
+}
+main .form .people span.error {
+  display: block;
 }
 main .form .people h3 {
   display: inline-block;
-}
-main .form .people.error span {
-  display: inline-block;
+  font-size: 18px;
+  color: #7f9c9f;
 }
 main .form .people .people-container {
   margin-top: 20px;

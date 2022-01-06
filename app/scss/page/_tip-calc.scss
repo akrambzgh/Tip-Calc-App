@@ -117,18 +117,20 @@ main {
       span {
         display: none;
         margin-top: -20px;
-        margin-left: 75px;
+        margin-left: 20px;
         color: $errorText;
+        text-align: right;
         user-select: none;
+        font-size: 12px;
         cursor: pointer;
+        &.error {
+          display: block;
+        }
       }
       h3 {
         display: inline-block;
-      }
-      &.error {
-        span {
-          display: inline-block;
-        }
+        font-size: 18px;
+        color: $DarkGrayishCyan;
       }
       .people-container {
         margin-top: 20px;
